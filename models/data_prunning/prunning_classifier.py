@@ -54,23 +54,6 @@ def main(args):
     os.makedirs(output_path, exist_ok=True)
     logger.info(f"Output path: {output_path}")
 
-    # # Load dataset
-    # dataset = load_data(args.input_data_path, args.debug)
-
-    # # Preprocess dataset
-    # processed_data = preprocess_data(dataset)
-
-    # # Shuffle the data to ensure random distribution
-    # random.seed(123)  # Set a seed for reproducibility
-    # random.shuffle(processed_data)
-
-    # # Split data into train (80%), validation (10%), and test (10%)
-    # train_split = int(0.8 * len(processed_data))
-    # val_split = int(0.9 * len(processed_data))
-
-    # train_data = processed_data[:train_split]
-    # val_data = processed_data[train_split:val_split]
-    # test_data = processed_data[val_split:]
     # Load datasets
     logger.info("Loading train, validation, and test datasets.")
     train_data = load_data(args.train_data_path, args.debug)
